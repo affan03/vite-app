@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,600;9..40,800&family=Poppins:wght@100;200;300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+
+}
+html{
+  overflow-x : hidden !important;
+}
+
+
+html , body {
+  font-family: 'Poppins', sans-serif !important;
+  overflow-x: hidden !important;
+  border: none !important;
+  margin: 0 !important;
+  width: 100% !important;
+  padding: 0 !important;
+  background-image: url('../background-light-grey.png') !important;
+  background-size: cover !important;
+  background-position: center 0px !important; 
+  background-repeat: no-repeat !important; 
+  background-attachment: fixed !important; 
+}
+
+
+ol,ul{
+  list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+section {
+  margin: 8rem 0;
+}
+.glider-next{
+  right: -46px !important;
+  top: 42% !important;
+}
+.glider-prev{
+  left: -46px !important;
+  top: 42% !important;
+}
+
+@media (max-width :600px){
+  .glider-next{
+    display: none !important;
+  }
+  .glider-prev{
+    display: none !important;
+  }
+}
+.course-container{
+  max-width: 43rem;
+  margin: 0 auto;
+  padding: 1.3rem;
+  top: 0;
+  height: auto;
+}
+@media (max-width : 766px) {
+  .course-container{
+    height: auto ;
+  }
+}

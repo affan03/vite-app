@@ -1,0 +1,41 @@
+
+  
+  .header-container h1 {
+    color: white;
+  }
+  .header-container .navbar img{
+    height: 3.8rem;
+  }
+  
+  .header-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav a h1{
+    font-size: 2rem;
+  }
+
+
+  .header-container .navbar{
+    background-color: #9569f9 !important;
+    margin: 0 !important;
+   
+  }
+  .header-container{
+    margin: 0 !important;
+  }
+  .header-container h1{
+    margin: 0;
+  }
+  @media (max-width : 575.5px){
+    .header-container .navbar img{
+        display: none;
+    }
+   
+
+}
+
+
+  

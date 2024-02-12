@@ -5,7 +5,8 @@ FROM node:latest
 WORKDIR /app
 
 # Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+COPY package.json .
+COPY vite.config.js .
 
 # Install dependencies
 RUN npm install
@@ -13,8 +14,10 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
+RUN npm run build
+
 # Expose the port that the app runs on
-EXPOSE 3000
+EXPOSE 8080
 
 # Define the command to run the application
 CMD ["npm", "run", "dev"]

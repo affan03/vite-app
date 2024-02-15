@@ -1,12 +1,11 @@
-# Use a Node.js base image
-FROM node:latest
+# Use node:latest as the base image
+FROM node
 
-# Set the working directory in the container
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the working directory
-COPY package.json .
-COPY vite.config.js .
+# Copy package.json and package-lock.json if available
+COPY package*.json ./
 
 # Install dependencies
 RUN npm install
@@ -14,10 +13,8 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
-RUN npm run build
+# Expose the port that your app runs on
+EXPOSE 5173
 
-# Expose the port that the app runs on
-EXPOSE 8080
-
-# Define the command to run the application
+# Command to run the application
 CMD ["npm", "run", "dev"]
